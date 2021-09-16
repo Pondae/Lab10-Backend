@@ -15,8 +15,8 @@ public class AuctionItemDaoDbImpl implements AuctionItemDao{
     @Autowired
     AuctionItemRepository auctionItemRepository;
     @Override
-    public Page<AuctionItem> getAuctionItem(String description, Pageable page) {
-        return auctionItemRepository.findByDescriptionContaining(description, page);
+    public Page<AuctionItem> getAuctionItem(Integer description, Pageable page) {
+        return auctionItemRepository.findBySuccessfulBid_AmountLessThan(description, page);
     }
     @Override
     public Page<AuctionItem> getAuctionItems(Integer pageSize, Integer page) {

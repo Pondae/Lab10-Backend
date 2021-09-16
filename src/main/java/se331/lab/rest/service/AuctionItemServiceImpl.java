@@ -13,7 +13,7 @@ public class AuctionItemServiceImpl implements AuctionItemService{
     AuctionItemDao auctionItemDao;
 
     @Override
-    public Page<AuctionItem> getAuctions(String description, Pageable pageable) {
+    public Page<AuctionItem> getAuctions(Integer description, Pageable pageable) {
         return auctionItemDao.getAuctionItem(description, pageable);
     }
     @Override

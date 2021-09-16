@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface AuctionItemDao {
     Page<AuctionItem> getAuctionItems(Integer pageSize, Integer page);
-    Page<AuctionItem> getAuctionItem(String description, Pageable page);
+    Page<AuctionItem> getAuctionItem(Integer description, Pageable page);
     Optional<AuctionItem> findById(Long id);
 }

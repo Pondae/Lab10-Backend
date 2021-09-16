@@ -6,5 +6,5 @@ import se331.lab.rest.entity.AuctionItem;
 
 public interface AuctionItemService {
     Page<AuctionItem> getAuctions(Integer pageSize, Integer page);
-    Page<AuctionItem> getAuctions(String description, Pageable pageable);
+    Page<AuctionItem> getAuctions(Integer description, Pageable pageable);
 }
