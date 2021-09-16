@@ -15,6 +15,6 @@ public interface EventRepository extends JpaRepository<Event,Long> {
     Page<Event> findByTitleContaining(String title, Pageable pageRequest);
     Page<Event> findByTitleContainingOrDescriptionContaining(String title, String description, Pageable pageRequest);
     Page<Event> findByTitleContainingAndDescriptionContaining(String title, String description, Pageable pageRequest);
-    Page<Event> findByTitleContainingOrDescriptionContainingOrOrganizer_NameContaining(
+    Page<Event> findByTitleIgnoreCaseContainingOrDescriptionIgnoreCaseContainingOrOrganizer_NameIgnoreCaseContaining(
             String title, String description, String organizerName, Pageable pageRequest);
 }
